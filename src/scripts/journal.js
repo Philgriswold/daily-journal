@@ -4,27 +4,27 @@
 */
 
 console.log("yo javascript whatup");
-const journalEntries = [
+// const journalEntries = [
 
-    {
-        dateofEntry: "August, 26 2019",
-        conceptsCovered: "functions, objects",
-        entry: "we learned about objects, dot notation, and other Javascript functions.",
-        mood: "ok",
-    },
-    {
-        dateofEntry: "August, 23 2019",
-        conceptsCovered: "Celebrity project presentation",
-        entry: "we presented our group projects and other Javascript functions",
-        mood: "ready for the weekend",
-    },
-    {
-        dateofEntry: "August, 22 2019",
-        conceptsCovered: "We worked on our celebrity page",
-        entry: "we spent all day in labs for celebrity project",
-        mood: "ready for the weekend",
-    },
-]
+//     {
+//         dateofEntry: "August, 26 2019",
+//         conceptsCovered: "functions, objects",
+//         entry: "we learned about objects, dot notation, and other Javascript functions.",
+//         mood: "ok",
+//     },
+//     {
+//         dateofEntry: "August, 23 2019",
+//         conceptsCovered: "Celebrity project presentation",
+//         entry: "we presented our group projects and other Javascript functions",
+//         mood: "ready for the weekend",
+//     },
+//     {
+//         dateofEntry: "August, 22 2019",
+//         conceptsCovered: "We worked on our celebrity page",
+//         entry: "we spent all day in labs for celebrity project",
+//         mood: "ready for the weekend",
+//     },
+// ]
 
 
 // daily journal part3
@@ -48,12 +48,28 @@ const putItOnThePage = (htmlString) => {
     dailyJournal.innerHTML += htmlString
 }
 
-journalEntries.forEach(journalEntry => {
-    const renderJournal = makeJournalEntryComponent(journalEntry)
-    putItOnThePage(renderJournal)
 
-});
 
+fetch(`http://localhost:3000/entries`)
+    .then(entries => entries.json())
+    .then(parsedEntries => {
+        console.log(parsedEntries);
+        parsedEntries.forEach(journalEntry => {
+            const renderJournal = makeJournalEntryComponent(journalEntry)
+            putItOnThePage(renderJournal)
+
+        });
+
+    })
+
+
+
+
+// fetch() // Fetch from the API
+//     .then() // Parse as JSON
+//     .then(entries => {
+//         // What should happen when we finally have the array?
+//     })
 
 
 
