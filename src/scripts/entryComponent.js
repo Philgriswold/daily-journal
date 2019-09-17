@@ -1,4 +1,5 @@
-import API from "./data.js"
+// import API from "./data.js"
+
 
 const makeJournalEntryComponent = (journalEntry) => {
     return `

@@ -30,14 +30,14 @@
             <label for="journalEntry">Journal Entry</label>
 
 
-            <input type="text" name="journalEntry" id="journalEntry">
+            <!-- <input type="text" name="journalEntry" id="journalEntry"> -->
 
-            <textarea rows="3" cols="20>">Enter text ...</textarea>
+            <textarea id="journalEntry" rows="3" cols="20>">Enter text ...</textarea>
         </fieldset>
 
         <fieldset>
             <label for="mood">Mood:
-                <select name="mood">
+                <select name="mood" class="journalMood">
                     <option value="option">Select Option</option>
                     <option value="happy">Happy</option>
                     <option value="depressed">Depressed</option>
@@ -46,7 +46,7 @@
             </label>
         </fieldset>
 
-        <button>Record Journal Entry</button>
+        <button class="buttonClass">Record Journal Entry</button>
 
     </form>
     <article class="entryLog"></article>

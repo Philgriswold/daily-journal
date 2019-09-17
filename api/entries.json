@@ -1,7 +1,5 @@
 {
-    "entries": [
-
-        {
+    "entries": [{
             "id": 1,
             "date": "August, 26 2019",
             "conceptsCovered": "functions, objects",
@@ -22,6 +20,6 @@
             "entry": "we spent all day in labs for celebrity project",
             "mood": "ready for the weekend"
         }
-    ]
 
+    ]
 }
