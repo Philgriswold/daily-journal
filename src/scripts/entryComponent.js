@@ -1,6 +1,6 @@
 // import API from "./data.js"
 
-
+// this returns the 
 const makeJournalEntryComponent = (journalEntry) => {
     return `
      <div>
@@ -12,6 +12,6 @@ const makeJournalEntryComponent = (journalEntry) => {
 }
 
 
-console.log("journalEntry ", journalEntry);
+// console.log("journalEntry ", journalEntry);
 
 export default makeJournalEntryComponent;

@@ -1,3 +1,6 @@
+<!-- I added a delete to fetch call and a delete button at 
+the end of HTML -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,6 +48,16 @@
                 </select>
             </label>
         </fieldset>
+        <fieldset>
+            <legend id="filterMoods">Filter by Mood</legend>
+            <input type="radio" id="moodChoice1" name="mood" value="Happy">
+            <label for="moodChoice1">Happy</label>
+            <input type="radio" id="moodChoice2" name="mood" value="Frustrated">
+            <label for="moodChoice2">Frustrated</label>
+            <input type="radio" id="moodChoice3" name="mood" value="Ok">
+            <label for="moodChoice3">Ok</label>
+        </fieldset>
+        <br></br>
 
         <button class="buttonClass">Record Journal Entry</button>
 
@@ -61,7 +74,11 @@
             <a href="http:nashvillesoftwareschool.com">Nashville Software</a>
         </p>
     </footer>
+    <article id="entryLog" class="entryLog"></article>
+    <div id="deleteButton"></div>
     <script type="module" src="scripts/journal.js"></script>
 </body>
+
+<div id="deleteButton"></div>
 
 </html>
