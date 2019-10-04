@@ -1,25 +1,46 @@
 {
-    "entries": [{
-            "id": 1,
-            "date": "August, 26 2019",
-            "conceptsCovered": "functions, objects",
-            "entry": "we learned about objects, dot notation, and other Javascript functions.",
-            "mood": "ok"
-        },
-        {
-            "id": 2,
-            "date": "August, 23 2019",
-            "conceptsCovered": "Celebrity project presentation",
-            "entry": "we presented our group projects and other Javascript functions",
-            "mood": "ready for the weekend"
-        },
-        {
-            "id": 3,
-            "date": "August, 22 2019",
-            "conceptsCovered": "We worked on our celebrity page",
-            "entry": "we spent all day in labs for celebrity project",
-            "mood": "ready for the weekend"
-        }
-
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "date": "August, 26 2019",
+      "conceptsCovered": "functions, objects",
+      "entry": "we learned about objects, dot notation, and other Javascript functions.",
+      "mood": "Ok"
+    },
+    {
+      "id": 2,
+      "date": "August, 23 2019",
+      "conceptsCovered": "Celebrity project presentation",
+      "entry": "we presented our group projects and other Javascript functions",
+      "mood": "Happy"
+    },
+    {
+      "id": 3,
+      "date": "August, 22 2019",
+      "conceptsCovered": "We worked on our celebrity page",
+      "entry": "we spent all day in labs for celebrity project",
+      "mood": "Frustrated"
+    },
+    {
+      "date": "2019-10-01",
+      "conceptsCovered": "web pack",
+      "entry": "react",
+      "mood": "option",
+      "id": 4
+    },
+    {
+      "date": "2019-10-01",
+      "conceptsCovered": "stuff",
+      "entry": "we did react",
+      "mood": "happy",
+      "id": 5
+    },
+    {
+      "date": "",
+      "conceptsCovered": "",
+      "entry": "",
+      "mood": "",
+      "id": 6
+    }
+  ]
 }

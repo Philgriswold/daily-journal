@@ -12,17 +12,19 @@ const entriesDom = {
             //this is injecting it into the HTML and...
             dailyJournal.innerHTML += makeJournalEntryComponent(journalEntry);
         }
-    }
+    },
     //moodFilter is a function that has htmlString-mood parameters
     //htmlString is taco, mood is defined in the API
-    moodFilter: (htmlString, mood) => {
+    moodFilter: (data, mood) => {
+        console.log("logged", mood)
         let entryLog = document.querySelector(".entryLog"); //targeting the Where in HTML and storing it in entryLog
         entryLog.innerHTML = ""; //takes whatever is found in entryLog and clears it.
-        htmlString.forEach(entry => { //htmlString is still taco? entry is from...
+        data.forEach(entry => { //htmlString is still taco? entry is from...
             if (entry.mood === mood) { //i think this all stays taco but when its call on journal.js it takes on value
-                entryLog.innerHTML += makeJournal(journalEntry);
+                entryLog.innerHTML += makeJournalEntryComponent(entry)
             } //the above line
         });
+    }
+}
 
-
-export default entriesDOM;
+export default entriesDom

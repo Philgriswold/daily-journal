@@ -1,10 +1,9 @@
 import API from "./data.js"
-import entriesDOM from "./entriesDom.js"
+import entriesDom from "./entriesDOM.js"
 
-
-//this goes and gets the data from the API and puts 
+//this goes and gets the data from the API and puts
 //and then prints it to the DOM?
-API.getJournalEntries().then(data => putItOnThePage(data))
+API.getJournalEntries().then(data => entriesDom.putItOnThePage(data))
 
 //factory function
 //creates the object that the event listener calls
@@ -50,26 +49,24 @@ document.querySelector(".buttonClass").addEventListener("click", (event) => {
             API.getJournalEntries()
                 .then(entry => {
                     console.log(entry)
-                    putItOnThePage(entry)
+                    entriesDom.putItOnThePage(entry)
                 });
         })
 })
 
 // this goes to legend where the radio buttons are
-document.querySelector("#filterMoods").addEventListener("click", )
+document.querySelector("#filterMoods").addEventListener("click", event => {
 
 //this is grabbing all the buttons in the html
-const allMoods = document.getElementByName("mood");
-allMoods.forEach(radioButton => {
+// const allMoods = document.getElementBy("mood");
+// allMoods.forEach(radioButton => {
         //event.target.value gets the value of what radio button was pushed and
         //then stores it in moodName
-        const moodName = event.target.value;
-        API.getJournalEntries()
+        console.log("mood", event);
+        let moodName = event.target.value;
+        API.filterJournalEntries(moodName)
             .then(data => {
-                entriesDOM.moodFilter(data, moodName);
-            })
-
-
-    }
-
-)
+                console.log("data", data)
+                entriesDom.moodFilter(data, moodName);
+    })
+})
